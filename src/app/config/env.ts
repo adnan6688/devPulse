@@ -8,7 +8,9 @@ interface EnvConfig {
 
     PORT: string;
     DB_URL : string;
-    PASSWORD_HASH_SALT : string
+    PASSWORD_HASH_SALT : string;
+    REFRESH_SECRET : string;
+    ACCESS_SECRET : string
 }
 
 
@@ -16,7 +18,7 @@ const LoadEnvVariables = (): EnvConfig => {
 
     const requirdVariable: string[] = [
 
-        "PORT" , 'DB_URL' , 'PASSWORD_HASH_SALT'
+        "PORT" , 'DB_URL' , 'PASSWORD_HASH_SALT' , 'REFRESH_SECRET' , 'ACCESS_SECRET'
     ]
 
     requirdVariable?.forEach((key) => {
@@ -29,7 +31,9 @@ const LoadEnvVariables = (): EnvConfig => {
     return {
         PORT: process.env.PORT as string,
         DB_URL : process.env.DB_URL as string,
-        PASSWORD_HASH_SALT : process.env.PASSWORD_HASH_SALT as string
+        PASSWORD_HASH_SALT : process.env.PASSWORD_HASH_SALT as string,
+        REFRESH_SECRET : process.env.REFRESH_SECRET as string,
+        ACCESS_SECRET : process.env.ACCESS_SECRET as string
     }
 }
 
