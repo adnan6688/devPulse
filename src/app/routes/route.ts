@@ -8,9 +8,6 @@ const modulesRoute = [
     {
         path: "/auth",
         route: userRoutes,
-    },{
-        path : '/issue',
-        route : issuesRoute
     }
 ];
 

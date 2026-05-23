@@ -1,10 +1,10 @@
 
 
-enum IssueType {
+export enum IssueType {
     feature_request = 'feature_request',
     bug = 'bug'
 }
-enum IssuStatus {
+export enum IssuStatus {
     open = 'open',
     in_progress = 'in_progress',
     resolved = 'resolved'

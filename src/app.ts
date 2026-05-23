@@ -2,6 +2,7 @@
 
 import express, { type NextFunction, type Request, type Response } from 'express'
 import { mainRouter } from './app/routes/route'
+import { issuesRoute } from './app/modules/Issues/issue.route'
 
 const app = express()
 
@@ -9,6 +10,7 @@ const app = express()
 app.use(express.json())
 
 app.use('/api', mainRouter)
+app.use('/api' , issuesRoute)
 
 
 

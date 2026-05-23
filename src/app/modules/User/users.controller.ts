@@ -8,7 +8,7 @@ const userCreate = async (req: Request, res: Response) => {
 
 
 
-    const ans = await userService.userCreate(req.body as any)
+    const ans = await userService.userCreate(req.body)
 
     sendResponse(res, {
         success: true,

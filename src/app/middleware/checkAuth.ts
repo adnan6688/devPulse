@@ -6,24 +6,23 @@ import type { JwtPayload } from "jsonwebtoken";
 
 
 
-export const checkAuth = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-        const token = req.headers.authorization || req.headers.authorization?.split(' ')[0]
+export const checkAuth = (...authRols: string[]) => async (req: Request, res: Response, next: NextFunction) => {
 
-        if (!token) {
-            throw new Error('Token is missing!')
-        }
+    const token = req.headers.authorization || req.headers.authorization?.split(' ')[0]
 
-        const user = await verifyTokens(token)
-        if (!user) {
-            throw new Error("Unauthorized access. Please log in again.");
-        }
-        req.user = user as JwtPayload
-        next()
-    } catch {
-
-        throw new Error('something error!')
+    if (!token) {
+        throw new Error('Token is missing!')
     }
 
+    const user = await verifyTokens(token)
+    if (!user) {
+        throw new Error("Unauthorized access. Please log in again.");
+    }
+    const result = user as JwtPayload
 
+    if (!authRols.includes((result.role) as string)) {
+        throw new Error(`Permission Denied!`)
+    }
+    req.user = user as JwtPayload
+    next()
 }
