@@ -2,9 +2,9 @@ Project Name : DevPulse
 
 Live URL : https://dev-pulse-2nd.vercel.app/
 
+ 
 
-
-Overview
+Overview: 
 
 DevPulse is a full-stack issue tracking system built for managing software bugs, feature requests, and development tasks with role-based access control. It supports contributors for reporting issues and maintainers for managing and updating them.
 
