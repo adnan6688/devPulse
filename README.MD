@@ -12,11 +12,11 @@ Features
     User authentication and role-based access (contributor, maintainer)
     Create, update, and manage issues
     Issue status tracking (open, in-progress, closed)
-Contributors can report issues
-Maintainers can update any issue including status changes
-Filter issues by type and status
-Secure API structure with modular architecture
-Clean separation of concerns using service, controller, and route layers
+    Contributors can report issues
+    Maintainers can update any issue including status changes
+    Filter issues by type and status
+    Secure API structure with modular architecture
+    Clean separation of concerns using service, controller, and route layers
 
 
 Tech Stack
