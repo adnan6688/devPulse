@@ -1,10 +1,8 @@
-Project Name
+Project Name : DevPulse
 
-DevPulse
+Live URL : https://dev-pulse-2nd.vercel.app/
 
-Live URL
 
-Not deployed yet
 
 Overview
 
@@ -19,33 +17,39 @@ Maintainers can update any issue including status changes
 Filter issues by type and status
 Secure API structure with modular architecture
 Clean separation of concerns using service, controller, and route layers
+
+
 Tech Stack
-Node.js
-Express.js
-TypeScript
-PostgreSQL
-JWT Authentication
-bcrypt
-dotenv
+    Node.js
+    Express.js
+    TypeScript
+    PostgreSQL
+    JWT Authentication
+    bcrypt
+    dotenv
+
 Project Structure
-npm initialized using npm init -y
-TypeScript configured with tsconfig
-Source folder: src
-Modular architecture inside modules
+    npm initialized using npm init -y
+    TypeScript configured with tsconfig
+    Source folder: src
+    Modular architecture inside modules
+
 Modules
-user module
-user.route.ts
-user.controller.ts
-user.service.ts
-user.model.ts
-issue module
-issue.route.ts
-issue.controller.ts
-issue.service.ts
-issue.model.ts
+    user module
+    user.route.ts
+    user.controller.ts
+    user.service.ts
+    user.model.ts
+
+
+    issue module
+    issue.route.ts
+    issue.controller.ts
+    issue.service.ts
+    issue.model.ts
+
+
 Setup Steps
-
-
 
 npm install
 Setup environment variables:
